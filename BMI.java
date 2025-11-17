@@ -1,31 +1,23 @@
-package bmi;
+package BMI;
 import java.util.Scanner;
-
-public class BMI {
+  public class BMI {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        System.out.println(" Enter your weight in pounds: ");
-        double weight = input.nextDouble();
-        System.out.println(" Enter your height in inches: ");
-        double height = input.nextDouble();
-        final double Kilograms_per_pound = 0.45359237;
-        final double Meters_per_Inch = 0.0254;
-        double Weightinkilograms =weight * Kilograms_per_pound;
-        double HeightinMeters = height * Meters_per_Inch;
-        double bmi = Weightinkilograms / (HeightinMeters * HeightinMeters);
-        System.out.println(" BMI is: " +bmi);
-        if (bmi < 18.5)
-            System.out.println("Underweight");
-        else if (bmi < 25)
-            System.out.println("Normal");
-        else if (bmi < 30)
-            System.out.println("Overweight");
-        else 
-            System.out.println("Obese");
-        
-            
-        
-        
+    Scanner input = new Scanner(System.in);
+    while(true) {
+        System.out.println("enter your weight");
+        float w = input.nextFloat();
+        System.out.println("enter your height");
+        float h = input.nextFloat();
+        float BMI = w/(h*h*h);
+        if(BMI < 18.5)
+            System.out.println("your under weight");
+        else if (BMI >= 18.5 && BMI < 25.0)
+            System.out.println("your normal");
+        else if (BMI >= 25.0 && BMI < 30.0)
+            System.out.println("your over weigt");
+        else if (BMI >= 30.0)
+            System.out.println("your obese");
+    }
     }
     
 }
